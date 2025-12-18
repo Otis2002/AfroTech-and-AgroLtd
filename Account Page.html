@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>  
+<body> 
     <div class="container">
         <div class="navbar">
        <div class="logo">
@@ -46,19 +46,37 @@
                         <hr id="Indicator">
 
                     </div>
-                    <form id="LoginForm">
-                        <input type="text" placeholder="Username">
-                        <input type="password" placeholder="Password">
-                        <button type="submit" class="btn">Login</button>
-                        <a href="">Forgot Password</a>
-                    </form>
-                     <form id="RegForm">
-                        <input type="text" placeholder="Username">
-                        <input type="email" placeholder="Email">
-                        <input type="password" placeholder="Password">
-                        <button type="submit" class="btn">Register</button>
-                        <a href="">Forgot Password</a>
-                    </form>
+<form id="LoginForm"
+      name="login"
+      method="POST"
+      data-netlify="true">
+
+    <input type="hidden" name="form-name" value="login">
+
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+
+    <button type="submit" class="btn">Login</button>
+    <a href="#">Forgot Password</a>
+</form>
+<form id="RegForm"
+      name="register"
+      method="POST"
+      data-netlify="true">
+
+    <input type="hidden" name="form-name" value="register">
+
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+
+    <button type="submit" class="btn">Register</button>
+    <a href="#">Forgot Password</a>
+</form>
+
+
+                    
+                     
 
                 </div>
             </div>
